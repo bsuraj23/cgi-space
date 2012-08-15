@@ -25,8 +25,9 @@ def getudsize(dinfo):
     return udsize
 
 def printdstat(dmount,tdsize,fdsize,udsize):
-    print '<article><h2>%s</h2>' %dmount
-    print '<strong>Free Disk Space: %5.2fGB</strong>' %fdsize
-    print '<br>Total Disk Space: %5.2fGB' %tdsize
-    print '<br> <progress value="%s" max="%s"></progress><br>' %(udsize, tdsize)
-    print '</article>'
+    if (tdsize != 0 ):
+        print '<article><h2>%s</h2>' %dmount
+        print '<strong>Free Disk Space: %5.2fGB</strong>' %fdsize
+        print '<br>Total Disk Space: %5.2fGB' %tdsize
+        print '<br> <progress value="%s" max="%s"></progress><br>' %(udsize, tdsize)
+        print '</article>'
